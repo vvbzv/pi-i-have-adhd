@@ -583,7 +583,7 @@ Pi discovers this repository as a native package: `extensions/` provides the ses
 ### Install
 
 ```bash
-pi install https://github.com/ayghri/i-have-adhd
+pi install https://github.com/vvbzv/pi-i-have-adhd
 ```
 
 Start a new Pi session. Toggle ADHD-friendly output for the current session:
@@ -625,7 +625,7 @@ Confirm the GitHub package is listed, then type `/i-have-adhd` and check that `â
 ### Update
 
 ```bash
-pi update https://github.com/ayghri/i-have-adhd
+pi update https://github.com/vvbzv/pi-i-have-adhd
 ```
 
 Or update every unpinned Pi package with `pi update --extensions`.
@@ -633,7 +633,7 @@ Or update every unpinned Pi package with `pi update --extensions`.
 ### Uninstall
 
 ```bash
-pi remove https://github.com/ayghri/i-have-adhd
+pi remove https://github.com/vvbzv/pi-i-have-adhd
 ```
 
 ### Always-on (optional)

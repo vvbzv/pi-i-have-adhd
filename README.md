@@ -22,15 +22,23 @@
 </p>
 
 
-## Install
+> pi plugin fork of [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) — upstream installs on Claude Code, Codex, Gemini, OpenCode, Grok, and more in [INSTALL.md](INSTALL.md).
 
-Copy/paste into your CLI prompt:
+## Install (pi)
 
-```text
-Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd, refer to the repo's AGENTS.md for instructions.
+```bash
+pi install https://github.com/vvbzv/pi-i-have-adhd
 ```
 
-Or 🔗 [check the installation instructions](INSTALL.md).
+Start pi (or run `/reload` to load it into your current session), then toggle with `/i-have-adhd`. The status line under the input box shows `● ADHD ON` while active; say `stop adhd mode` to turn it off.
+
+| What | Command |
+| --- | --- |
+| Update | `pi update https://github.com/vvbzv/pi-i-have-adhd` |
+| Uninstall | `pi remove https://github.com/vvbzv/pi-i-have-adhd` |
+| Always-on | `touch ~/.pi/agent/.i-have-adhd-always` |
+
+Other pi options (`--adhd` flag, `hideStatus`, config file): the [Pi section](INSTALL.md) of INSTALL.md.
 
 ## What it does
 
@@ -84,16 +92,7 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 
 ## Tune it
 
-Fork, edit `skills/i-have-adhd/SKILL.md`, then swap your copy in:
-
-```bash
-claude plugin uninstall i-have-adhd            # drop the upstream copy first:
-claude plugin marketplace remove i-have-adhd   # fork and upstream share both names
-claude plugin marketplace add <your-username>/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
-```
-
-Restart your coding assistant, then re-invoke `/i-have-adhd`.
+Edit `skills/i-have-adhd/SKILL.md` (keep the `.cursor/skills/i-have-adhd/SKILL.md` mirror in sync), bump `version` in `package.json`, commit and push. Then `/reload` or `pi update https://github.com/vvbzv/pi-i-have-adhd` in pi.
 
 ## Credits
 
